@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.bottom-sheet-backdrop {
+  z-index: 4;
+}
+
 body {
   display: flex;
   place-items: center;

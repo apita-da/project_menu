@@ -2,7 +2,7 @@
   <section class="menu-section">
     <h2 class="menu-section-title">{{ title }}</h2>
     <ul class="menu-section-list">
-      <li class="menu-section-element" v-for="item in items" :key="item.id">
+      <li v-for="item in items" :key="item.id">
         <MenuItem :dish="item" />
       </li>
     </ul>
@@ -37,20 +37,6 @@ const props = defineProps<{
   .menu-section-list {
     max-width: fit-content;
     margin: auto;
-  }
-
-  .menu-section-element {
-    pointer-events: all;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    &:hover {
-      cursor: pointer;
-      color: #b8860b;
-    }
   }
 }
 </style>

@@ -1,50 +1,83 @@
 <template>
-  <div class="app-container">
-    <div class="paralax-container">
-      <Background :num-layers="5" star-color="#b8860b" background-color="#28364a" />
-    </div>
-    <div class="menu-sections">
-      <Section title="Entrantes" :items="menu.starters" />
-      <Section title="Platos Principales" :items="menu.mainDishes" />
-      <Section title="Postres" :items="menu.desserts" />
+  <div v-if="showPreVideoPage">
+    <div>
+      <p>Aquí tienes un mensaje</p>
+      <button @click="startVideo">Ver Video</button>
     </div>
   </div>
+  <div v-else-if="showVideo">
+    <video
+      class="init-video"
+      ref="introVideo"
+      @ended="videoEnded"
+      src="../src/assets/video_nochebuena.mp4"
+      playsinline
+    ></video>
+  </div>
+  <div v-else-if="showButton">
+    <div
+      style="
+        background-color: blue;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <button @click="showMenu = true">Ir al Menú</button>
+    </div>
+  </div>
+  <div v-else>
+    <menuPage v-if="menuLoaded" :menu="menu" />
+    <div v-else>Cargando menú...</div>
+  </div>
 </template>
-<script setup lang="ts">
-import menuService from '@/services/menuService'
-import Background from '@/components/Background.vue'
-import Section from '@/components/Section.vue'
 
-const menu = menuService.getMenu()
+<script setup lang="ts">
+import { ref, onMounted, nextTick } from 'vue'
+import MenuPage from '@/components/MenuPage.vue'
+import menuService, { type Menu } from '@/services/menuService'
+
+const introVideo = ref<HTMLVideoElement | null>(null)
+const showVideo = ref(false)
+const showButton = ref(false)
+const showMenu = ref(false)
+const menuLoaded = ref(false)
+const menu = ref<Menu | null>(null)
+const showPreVideoPage = ref(true)
+
+const startVideo = () => {
+  showPreVideoPage.value = false
+  showVideo.value = true
+
+  nextTick(() => {
+    if (introVideo.value) {
+      introVideo.value.play().catch((error) => {
+        console.error('Error al reproducir el video:', error)
+      })
+    }
+  })
+}
+
+const videoEnded = () => {
+  showVideo.value = false
+  showButton.value = true
+}
+
+onMounted(() => {
+  menu.value = menuService.getMenu()
+  menuLoaded.value = true
+})
 </script>
 <style>
 @import '@/assets/styles/main';
-
-/* .menu-sections {
-  position: absolute;
-  top: 10%;
-  left: 2%;
-  z-index: 1;
-} */
-.app-container {
-  display: flex;
-  position: relative;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-}
-.paralax-container {
+.init-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Fondo detrás */
-  overflow: hidden;
-}
-
-.menu-sections {
-  margin-top: 2em;
-  padding: 5%;
-  z-index: 2;
+  background-color: #28364a;
 }
 </style>
