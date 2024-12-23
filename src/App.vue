@@ -132,7 +132,7 @@ const videoEnded = () => {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #fff;
+  background-color: #b8860b;
   border-radius: 50px;
   animation: underline-draw 5s infinite linear;
 }
