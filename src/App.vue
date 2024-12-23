@@ -4,7 +4,7 @@
       class="init-video"
       ref="introVideo"
       @ended="videoEnded"
-      src="../src/assets/video_nochebuena.mp4"
+      src="/public/assets/video_nochebuena.mp4"
       playsinline
       autoplay
       muted
@@ -39,8 +39,8 @@ const toggleAudio = () => {
   if (introVideo.value) {
     introVideo.value.muted = !introVideo.value.muted
     soundIconSrc.value = introVideo.value.muted
-      ? '../src/assets/icons/sound_disable.png'
-      : '../src/assets/icons/sound_enable.png'
+      ? './public/assets/icons/sound_disable.png'
+      : './public/assets/icons/sound_enable.png'
   }
 }
 const goToMenu = () => {

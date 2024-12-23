@@ -3,13 +3,13 @@
     <img
       class="dish-type"
       v-if="dish.type === 'hot'"
-      src="@/assets/icons/fuego-cobre.png"
+      src="/public/assets/icons/fuego-cobre.png"
       alt="Icono caliente"
     />
     <img
       class="dish-type"
       v-else-if="dish.type === 'cold'"
-      src="@/assets/icons/nieve-cobre.png"
+      src="/public/assets/icons/nieve-cobre.png"
       alt="Icono frío"
     />
     <span class="dish-item">{{ dish.name }}</span>
