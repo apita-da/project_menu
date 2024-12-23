@@ -12,11 +12,21 @@ export default defineConfig({
     vueDevTools(),    
 
   ],
+  build: {
+    modulePreload: false,
+    target: 'esnext',
+    minify: true,
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        minifyInternalExports: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-
     },
   },
 })
