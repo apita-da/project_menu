@@ -1,0 +1,50 @@
+{
+  "menu": {
+    "starters": [
+      { "id": 1, "name": "Tabla de quesos y embutidos", "description": "...", "type": "cold" },
+      {
+        "id": 2,
+        "name": "Mermelada de pimientos con queso crema",
+        "description": "...",
+        "type": "cold"
+      },
+      { "id": 3, "name": "Tartaletas de pollo al curry", "description": "...", "type": "cold" },
+      { "id": 4, "name": "Canapés con steak tartar", "description": "...", "type": "cold" },
+      { "id": 5, "name": "Canapés de paté con mermelada", "description": "...", "type": "cold" },
+      { "id": 6, "name": "Hojaldres variados", "description": "...", "type": "cold" },
+      { "id": 7, "name": "Bolitas de cabrales y membrillo", "description": "...", "type": "hot" },
+      { "id": 8, "name": "Croquetitas de cocido", "description": "...", "type": "hot" },
+      { "id": 9, "name": "Zamburiñas", "description": "...", "type": "hot" }
+    ],
+    "mainDishes": [
+      { "id": 10, "name": "Consomé", "description": "..." },
+      { "id": 11, "name": "Salmón marinado con ensalada alemana", "description": "..." },
+      {
+        "id": 12,
+        "name": "Langostinos en salsa americana con arroz blanco",
+        "description": "..."
+      },
+      {
+        "id": 13,
+        "name": "Solomillo de cerdo al PX con puré de patatas",
+        "description": "..."
+      }
+    ],
+    "desserts": [
+      { "id": 14, "name": "Tocino de cielo", "description": "..." },
+      { "id": 15, "name": "Pudding de panetone", "description": "..." }
+    ],
+    "wines": [
+      {
+        "id": 16,
+        "name": "WildeBaai de Sudáfrica",
+        "description": "..."
+      },
+      {
+        "id": 17,
+        "name": "Pesquera",
+        "description": "..."
+      }
+    ]
+  }
+}
