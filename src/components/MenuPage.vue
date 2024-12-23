@@ -47,5 +47,7 @@ const props = defineProps<{
   margin-top: 2em;
   padding: 5%;
   z-index: 2;
+  height: 100vh;
+  overflow: auto;
 }
 </style>
