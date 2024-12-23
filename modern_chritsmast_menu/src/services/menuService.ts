@@ -11,6 +11,7 @@ export interface Menu {
   starters: Dish[]
   mainDishes: Dish[]
   desserts: Dish[]
+  wines: Dish[]
 }
 
 const getMenu = (): Menu => {

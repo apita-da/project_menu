@@ -14,10 +14,12 @@
     />
     <span class="dish-item">{{ dish.name }}</span>
   </div>
+  <!--
   <Sheet v-model:visible="visible">
     {{ dish.name }}
     {{ dish.description }}
   </Sheet>
+  -->
 </template>
 
 <script setup lang="ts">
@@ -42,7 +44,7 @@ const props = defineProps<{
   gap: 10px;
 
   &:hover {
-    cursor: pointer;
+    /* cursor: not-allowed; */
     color: #b8860b;
   }
 }

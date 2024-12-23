@@ -9,29 +9,42 @@
         "type": "cold"
       },
       { "id": 3, "name": "Tartaletas de pollo al curry", "description": "...", "type": "cold" },
-      { "id": 4, "name": "Tostaditas con steak tartar", "description": "...", "type": "cold" },
-      { "id": 5, "name": "Tostaditas de paté con mermelada", "description": "...", "type": "cold" },
-      { "id": 6, "name": "Bolitas de cabrales y membrillo", "description": "...", "type": "hot" },
-      { "id": 7, "name": "Zamburiñas", "description": "...", "type": "hot" },
-      { "id": 8, "name": "Huevos de codorniz sobre Pringles", "description": "...", "type": "hot" }
+      { "id": 4, "name": "Canapes con steak tartar", "description": "...", "type": "cold" },
+      { "id": 5, "name": "Canapes de paté con mermelada", "description": "...", "type": "cold" },
+      { "id": 6, "name": "Hojaldres variados", "description": "...", "type": "cold" },
+      { "id": 7, "name": "Bolitas de cabrales y membrillo", "description": "...", "type": "hot" },
+      { "id": 8, "name": "Croquetitas de cocido", "description": "...", "type": "hot" },
+      { "id": 9, "name": "Zamburiñas", "description": "...", "type": "hot" }
     ],
     "mainDishes": [
-      { "id": 9, "name": "Consomé", "description": "..." },
-      { "id": 10, "name": "Salmón marinado con ensalada alemana", "description": "..." },
+      { "id": 10, "name": "Consomé", "description": "..." },
+      { "id": 11, "name": "Salmón marinado con ensalada alemana", "description": "..." },
       {
-        "id": 11,
+        "id": 12,
         "name": "Langostinos en salsa americana con arroz blanco",
         "description": "..."
       },
       {
-        "id": 12,
+        "id": 13,
         "name": "Solomillo de cerdo al PX con puré de patatas",
         "description": "..."
       }
     ],
     "desserts": [
-      { "id": 13, "name": "Tocino de cielo", "description": "..." },
-      { "id": 14, "name": "Pudding de panetone", "description": "..." }
+      { "id": 14, "name": "Tocino de cielo", "description": "..." },
+      { "id": 15, "name": "Pudding de panetone", "description": "..." }
+    ],
+    "wines": [
+      {
+        "id": 16,
+        "name": "WildeBaai de Sudáfrica",
+        "description": "..."
+      },
+      {
+        "id": 17,
+        "name": "Pesquera",
+        "description": "..."
+      }
     ]
   }
 }

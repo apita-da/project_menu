@@ -7,6 +7,7 @@
       <Section v-if="menu" title="Entrantes" :items="menu.starters" />
       <Section v-if="menu" title="Platos Principales" :items="menu.mainDishes" />
       <Section v-if="menu" title="Postres" :items="menu.desserts" />
+      <Section v-if="menu" title="Vinos" :items="menu.wines" />
     </div>
   </div>
 </template>
