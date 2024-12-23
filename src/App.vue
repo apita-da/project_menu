@@ -33,14 +33,14 @@ const showVideo = ref(true)
 const showMenu = ref(false)
 const menuLoaded = ref(false)
 const menu = ref<Menu | null>(null)
-const soundIconSrc = ref('/assets/sound_disable.png')
+const soundIconSrc = ref('/public/assets/sound_disable.png')
 
 const toggleAudio = () => {
   if (introVideo.value) {
     introVideo.value.muted = !introVideo.value.muted
     soundIconSrc.value = introVideo.value.muted
-      ? '/assets/sound_disable.png'
-      : '/assets/sound_enable.png'
+      ? '/public/assets/sound_disable.png'
+      : '/public/assets/sound_enable.png'
   }
 }
 const goToMenu = () => {
